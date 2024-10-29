@@ -2,9 +2,9 @@ import 'package:admobtest/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  MobileAds.instance.initialize();
+  await MobileAds.instance.initialize();
   RequestConfiguration requestConfiguration = RequestConfiguration(
       testDeviceIds: [
         '05d5468c-8a90-4034-a13b-5876c3275a6a',

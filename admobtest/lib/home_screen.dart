@@ -24,7 +24,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
     bannerAd = BannerAd(
         size: AdSize.fullBanner,
-        adUnitId: "ca-app-pub-3560714578588021/5377782974",
+        adUnitId: "ca-app-pub-3940256099942544/9214589741",
         listener: BannerAdListener(onAdLoaded: (load) {
           setState(() {
             isBannerAdReady = true;
@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
       ..load();
 
     InterstitialAd.load(
-        adUnitId: "ca-app-pub-3560714578588021/2751619631",
+        adUnitId: "ca-app-pub-3940256099942544/1033173712",
         request: AdRequest(),
         adLoadCallback: InterstitialAdLoadCallback(onAdLoaded: (ad) {
           setState(() {
@@ -66,7 +66,7 @@ class _HomeScreenState extends State<HomeScreen> {
           //load new ad
 
           InterstitialAd.load(
-            adUnitId: "ca-app-pub-3940256099942544/2247696110",
+            adUnitId: "ca-app-pub-3940256099942544/1033173712",
             request: AdRequest(),
             adLoadCallback: InterstitialAdLoadCallback(
               onAdLoaded: (ad) {
@@ -90,6 +90,8 @@ class _HomeScreenState extends State<HomeScreen> {
           });
         },
       );
+    } else {
+      print("====== nul  ====");
     }
   }
 
